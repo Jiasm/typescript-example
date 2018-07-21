@@ -18,6 +18,6 @@ mysql> CREATE TABLE `user_info_test` (   `uid` int(11) unsigned NOT NULL AUTO_IN
 > curl http://127.0.0.1:6666/add/Niko/1
 > curl http://127.0.0.1:6666/add/Bellic/2
 
-> curl http://127.0.0.1:6666/list/ # Niko & Bellic
-> curl http://127.0.0.1:6666/list/filter/1 # Niko
+> curl http://127.0.0.1:6666/list/          # [{name: Niko, ...}, {name: Bellic, ...}]
+> curl http://127.0.0.1:6666/list/filter/1  # [{name: Niko, ...}]
 ```
