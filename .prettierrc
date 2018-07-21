@@ -1,0 +1,5 @@
+semi: false
+parser: typescript
+singleQuote: true
+proseWrap: never
+tabWidth: 2
