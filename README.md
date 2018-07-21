@@ -10,7 +10,7 @@ example for typescript, with decorators (routing-controllers and sequelize)
 
 mysql> create database ts_test;
 mysql> use ts_test;
-mysql> CREATE TABLE `user_info_test` (   `uid` int(11) unsigned NOT NULL AUTO_INCREMENT,   `name` int(11) NOT NULL,   `age` int(11) DEFAULT '0',   `gender` int(2) NOT NULL,   PRIMARY KEY (`uid`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+mysql> CREATE TABLE `user_info_test` (   `uid` int(11) unsigned NOT NULL AUTO_INCREMENT,   `name` varchar(11) NOT NULL,   `age` int(3) DEFAULT '0',   `gender` int(1) NOT NULL,   PRIMARY KEY (`uid`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 > npm run watch-ts
 > npm run watch-node
