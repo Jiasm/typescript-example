@@ -13,7 +13,7 @@ example for typescript, with decorators (routing-controllers and sequelize)
 > npm i
 > brew service start mysql
 > mysql -u root -p
-
+# 请自行修改config/backend/local.js 中的user、password 以及以下的database
 mysql> create database ts_test;
 mysql> use ts_test;
 mysql> CREATE TABLE `user_info_test` (   `uid` int(11) unsigned NOT NULL AUTO_INCREMENT,   `name` varchar(11) NOT NULL,   `age` int(3) DEFAULT '0',   `gender` int(1) NOT NULL,   PRIMARY KEY (`uid`) ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
