@@ -1,6 +1,12 @@
 # typescript-example
 example for typescript, with decorators (routing-controllers and sequelize)
 
+## dependence
+
+- [routing-controllers](https://github.com/typestack/routing-controllers)
+- [sequelize](https://github.com/sequelize/sequelize)
+- [sequelize-typescript](https://github.com/RobinBuschmann/sequelize-typescript)
+
 ## usage
 
 ```bash
