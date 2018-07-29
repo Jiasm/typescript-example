@@ -1,5 +1,5 @@
 # typescript-example
-example for typescript, with decorators (routing-controllers and sequelize)
+:pager: example for typescript, with decorators (routing-controllers and sequelize)
 
 ## dependence
 
