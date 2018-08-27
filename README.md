@@ -1,5 +1,5 @@
 # typescript-example
-example for typescript, with decorators (routing-controllers and sequelize)
+:pager: example for typescript, with decorators (routing-controllers and sequelize)
 
 ## dependence
 
@@ -43,5 +43,5 @@ mysql> CREATE TABLE `user_info_test` (   `uid` int(11) unsigned NOT NULL AUTO_IN
 ## 配套的一篇水文
 
 - [blog](https://blog.jiasm.org/2018/07/21/TypeScript%E5%9C%A8node%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5/)
-- [掘金](https://juejin.im/post/5b534faee51d45195866f2ce)
+- [掘金](https://juejin.im/post/5b5413755188251aab713d14)
 - [思否](https://segmentfault.com/a/1190000015719697)

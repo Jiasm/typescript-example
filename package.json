@@ -31,7 +31,6 @@
     "koa-static": "^5.0.0",
     "koa-views": "^6.1.4",
     "mysql2": "^1.5.3",
-    "node-qconf": "^0.2.0",
     "reflect-metadata": "^0.1.12",
     "routing-controllers": "^0.7.7",
     "sequelize": "^4.38.0",
