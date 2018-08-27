@@ -6,6 +6,10 @@
 - [routing-controllers](https://github.com/typestack/routing-controllers)
 - [sequelize](https://github.com/sequelize/sequelize)
 - [sequelize-typescript](https://github.com/RobinBuschmann/sequelize-typescript)
+- [react](https://github.com/facebook/react)
+- [material-ui](https://github.com/mui-org/material-ui)
+- [webpack](https://github.com/webpack/webpack)
+- [eslint](https://github.com/webpack/webpack)
 
 ## usage
 
