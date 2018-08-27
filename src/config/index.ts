@@ -6,6 +6,7 @@ import { ConfigMap } from 'config'
 
 export * from './env'
 export * from './server'
+export * from '../common/config'
 
 let configs: ConfigMap
 

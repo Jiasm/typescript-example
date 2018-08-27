@@ -11,7 +11,7 @@ example for typescript, with decorators (routing-controllers and sequelize)
 
 ```bash
 > npm i
-> brew service start mysql
+> brew services start mysql
 > mysql -u root -p
 # 请自行修改config/backend/local.js 中的user、password 以及以下的database
 mysql> create database ts_test;
@@ -21,11 +21,23 @@ mysql> CREATE TABLE `user_info_test` (   `uid` int(11) unsigned NOT NULL AUTO_IN
 > npm run watch-ts
 > npm run watch-node
 
-> curl http://127.0.0.1:6666/add/Niko/1
-> curl http://127.0.0.1:6666/add/Bellic/2
+> curl http://127.0.0.1:8888/add/Niko/18/1
+> curl http://127.0.0.1:8888/add/Bellic/26/2
 
-> curl http://127.0.0.1:6666/list/          # [{name: Niko, ...}, {name: Bellic, ...}]
-> curl http://127.0.0.1:6666/list/filter/1  # [{name: Niko, ...}]
+> curl http://127.0.0.1:8888/list/          # [{name: Niko, ...}, {name: Bellic, ...}]
+> curl http://127.0.0.1:8888/list/filter/1  # [{name: Niko, ...}]
+```
+
+## front-end
+
+如果还想看TS在React中的使用，可以这样搞：
+```bash
+> cd client-src
+> npm i
+> npm run dll
+> npm run start
+# 在确保上边的node服务是启动的情况下
+>  open http://127.0.0.1:8888
 ```
 
 ## 配套的一篇水文

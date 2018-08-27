@@ -1,0 +1,20 @@
+extends: 
+  - blued-react
+  - blued-typescript
+rules:
+  react/jsx-filename-extension:
+    - 2
+    - extensions:
+      - .js
+      - .jsx
+      - .ts
+      - .tsx
+  import/no-extraneous-dependencies:
+    - 2
+    - devDependencies:
+      - "**/*.test.js"
+      - "**/*.spec.js"
+      - "**/webpack*"
+      - "**/webpack/*"
+  global-require: 0
+  typescript/member-ordering: 0

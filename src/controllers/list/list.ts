@@ -8,17 +8,15 @@ export default class {
   @Get('/')
   async router(@Ctx() ctx: Context) {
     try {
-      console.log(ctx.url)
-
       return {
         code: 200,
-        data: await filterList()
+        data: await filterList(),
       }
     } catch (e) {
       console.error(ctx, e)
       return {
         code: 500,
-        message: '服务器错误'
+        message: '服务器错误',
       }
     }
   }
@@ -29,23 +27,21 @@ export default class {
       if (!gender) {
         return {
           code: 401,
-          message: '缺少参数'
+          message: '缺少参数',
         }
       }
-
-      console.log(ctx.url)
 
       return {
         code: 200,
         data: await filterList({
-          gender
-        })
+          gender,
+        }),
       }
     } catch (e) {
       console.error(ctx, e)
       return {
         code: 500,
-        message: '服务器错误'
+        message: '服务器错误',
       }
     }
   }
@@ -56,11 +52,11 @@ export default class {
  */
 async function filterList({ gender }: { gender?: number } = {}): Promise<
   UserInfo[]
-> {
+  > {
   return UserInfoModel.findAll({
     raw: true,
     where: gender && {
-      gender
-    }
+      gender,
+    },
   })
 }

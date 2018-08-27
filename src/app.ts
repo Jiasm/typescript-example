@@ -5,7 +5,7 @@ import bodyParser from 'koa-bodyparser'
 import { distPath } from './config'
 
 const app = createKoaServer({
-  controllers: [__dirname + '/controllers/**/*{.js,.ts}']
+  controllers: [`${__dirname}/controllers/**/*{.js,.ts}`],
 })
 
 app.use(serve(distPath))

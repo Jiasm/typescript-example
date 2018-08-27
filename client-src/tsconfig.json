@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "esnext", // 使用 ES2015 模块
+    "target": "es6", // 编译成 ES2015 (Babel 将做剩下的事情)
+    "allowSyntheticDefaultImports": true, // 看下面
+    "baseUrl": ".", // 可以相对这个目录 import 文件
+    "sourceMap": true, // 使 TypeScript 生成 sourcemaps
+    "outDir": "../client-dist", // 构建输出目录 (因为我们大部分时间都在使用 Webpack，所以不太相关)
+    "jsx": "preserve", // 开启 JSX 模式, 但是 "preserve" 告诉 TypeScript 不要转换它(我们将使用 Babel)
+    "strict": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@Common/*": [
+        "../src/common/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules" // 这个目录下的代码不会被 typescript 处理
+  ]
+}

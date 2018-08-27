@@ -17,17 +17,16 @@ const user_info_1 = require("../../models/user/user-info");
 let default_1 = class default_1 {
     async router(ctx) {
         try {
-            console.log(ctx.url);
             return {
                 code: 200,
-                data: await filterList()
+                data: await filterList(),
             };
         }
         catch (e) {
             console.error(ctx, e);
             return {
                 code: 500,
-                message: '服务器错误'
+                message: '服务器错误',
             };
         }
     }
@@ -36,22 +35,21 @@ let default_1 = class default_1 {
             if (!gender) {
                 return {
                     code: 401,
-                    message: '缺少参数'
+                    message: '缺少参数',
                 };
             }
-            console.log(ctx.url);
             return {
                 code: 200,
                 data: await filterList({
-                    gender
-                })
+                    gender,
+                }),
             };
         }
         catch (e) {
             console.error(ctx, e);
             return {
                 code: 500,
-                message: '服务器错误'
+                message: '服务器错误',
             };
         }
     }
@@ -81,8 +79,8 @@ async function filterList({ gender } = {}) {
     return user_info_1.UserInfoModel.findAll({
         raw: true,
         where: gender && {
-            gender
-        }
+            gender,
+        },
     });
 }
 //# sourceMappingURL=list.js.map

@@ -5,43 +5,43 @@ import { UserInfoModel } from '../../models/user/user-info'
 
 @JsonController('/add')
 export default class {
-  @Get('/:name/:gender')
+  @Get('/:name/:age/:gender')
   async router(
     @Ctx() ctx: Context,
     @Param('name') name: string,
+    @Param('age') age: number,
     @Param('gender') gender: number
   ) {
     try {
       if (!name || !gender) {
         return {
           code: 401,
-          message: '缺少参数'
+          message: '缺少参数',
         }
       }
 
-      let entity: UserData = {
+      const entity: UserData = {
         name,
-        gender
+        gender,
+        age,
       }
 
       // 创建举报记录
       createUser(entity).catch(err => {
         console.error(ctx, err, {
           type: 'insert',
-          ...entity
+          ...entity,
         })
       })
 
-      console.log(ctx.url, { entity })
-
       return {
-        code: 200
+        code: 200,
       }
     } catch (e) {
       console.error(ctx, e)
       return {
         code: 500,
-        message: '服务器错误'
+        message: '服务器错误',
       }
     }
   }
@@ -53,6 +53,6 @@ export default class {
 async function createUser({ name, gender }: UserData) {
   return (await UserInfoModel.create({
     name,
-    gender
+    gender,
   })).save()
 }

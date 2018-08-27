@@ -9,6 +9,7 @@ const local_1 = require("./backend/local");
 const env_1 = require("./env");
 __export(require("./env"));
 __export(require("./server"));
+__export(require("../common/config"));
 let configs;
 exports.configs = configs;
 switch (true) {

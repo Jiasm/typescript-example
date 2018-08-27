@@ -15,43 +15,44 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const routing_controllers_1 = require("routing-controllers");
 const user_info_1 = require("../../models/user/user-info");
 let default_1 = class default_1 {
-    async router(ctx, name, gender) {
+    async router(ctx, name, age, gender) {
         try {
             if (!name || !gender) {
                 return {
                     code: 401,
-                    message: '缺少参数'
+                    message: '缺少参数',
                 };
             }
-            let entity = {
+            const entity = {
                 name,
-                gender
+                gender,
+                age,
             };
             // 创建举报记录
             createUser(entity).catch(err => {
                 console.error(ctx, err, Object.assign({ type: 'insert' }, entity));
             });
-            console.log(ctx.url, { entity });
             return {
-                code: 200
+                code: 200,
             };
         }
         catch (e) {
             console.error(ctx, e);
             return {
                 code: 500,
-                message: '服务器错误'
+                message: '服务器错误',
             };
         }
     }
 };
 __decorate([
-    routing_controllers_1.Get('/:name/:gender'),
+    routing_controllers_1.Get('/:name/:age/:gender'),
     __param(0, routing_controllers_1.Ctx()),
     __param(1, routing_controllers_1.Param('name')),
-    __param(2, routing_controllers_1.Param('gender')),
+    __param(2, routing_controllers_1.Param('age')),
+    __param(3, routing_controllers_1.Param('gender')),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [Object, String, Number]),
+    __metadata("design:paramtypes", [Object, String, Number, Number]),
     __metadata("design:returntype", Promise)
 ], default_1.prototype, "router", null);
 default_1 = __decorate([
@@ -64,7 +65,7 @@ exports.default = default_1;
 async function createUser({ name, gender }) {
     return (await user_info_1.UserInfoModel.create({
         name,
-        gender
+        gender,
     })).save();
 }
 //# sourceMappingURL=add.js.map
