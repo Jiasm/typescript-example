@@ -1,10 +1,10 @@
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const QiniuPlugin = require('qiniu-webpack-plugin')
-const baseConfig = require('./base')
+import merge from 'webpack-merge'
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+import QiniuPlugin from 'qiniu-webpack-plugin'
+import baseConfig from './base'
+
 const qntoken = {
   // 如果使用七牛的童鞋，可以自行输入token之类的参数体验
   accessKey: '',
@@ -69,8 +69,6 @@ module.exports = merge(baseConfig, {
     }),
     new UglifyJsPlugin({
       uglifyOptions: {
-        beautify: false,
-        comments: false,
         compress: {
           warnings: false,
           drop_console: true,

@@ -1,11 +1,13 @@
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin')
-const baseConfig = require('./base.js')
+import webpack from 'webpack'
+import merge from 'webpack-merge'
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import AddAssetHtmlPlugin from 'add-asset-html-webpack-plugin'
+import baseConfig from './base'
 
-module.exports = merge(baseConfig, {
+const manifest = require('../dist/vendors-manifest.json')
+
+export default merge(baseConfig, {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, '../../client-dist'),
@@ -42,5 +44,9 @@ module.exports = merge(baseConfig, {
       /\.ejs$/,
       /\.js$/,
     ]),
+    new webpack.DllReferencePlugin({
+      context: __dirname,
+      manifest,
+    }),
   ],
 })

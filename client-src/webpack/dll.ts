@@ -1,8 +1,8 @@
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const path = require('path')
-const common = require('./common')
+import webpack from 'webpack'
+import merge from 'webpack-merge'
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+import path from 'path'
+import common from './common'
 
 module.exports = merge(common, {
   entry: {
@@ -26,8 +26,6 @@ module.exports = merge(common, {
     }),
     new UglifyJsPlugin({
       uglifyOptions: {
-        beautify: false,
-        comments: false,
         compress: {
           warnings: false,
           drop_console: true,

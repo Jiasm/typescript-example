@@ -1,10 +1,9 @@
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const path = require('path')
-const common = require('./common')
-const manifest = require('../dist/vendors-manifest.json')
+import webpack from 'webpack'
+import merge from 'webpack-merge'
+import path from 'path'
+import common from './common'
 
-module.exports = merge(common, {
+export default merge(common, {
   entry: ['babel-polyfill', './index.tsx'],
   module: {
     rules: [
@@ -41,10 +40,4 @@ module.exports = merge(common, {
       '@Common': path.resolve(__dirname, '../../src/common'),
     },
   },
-  plugins: [
-    new webpack.DllReferencePlugin({
-      context: __dirname,
-      manifest,
-    }),
-  ],
 })
