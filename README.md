@@ -44,6 +44,13 @@ mysql> CREATE TABLE `user_info_test` (   `uid` int(11) unsigned NOT NULL AUTO_IN
 >  open http://127.0.0.1:8888
 ```
 
+## run test
+
+本示例存在一些简单的测试用例，可以在服务启动的情况下使用：
+```bash
+npm test
+```
+
 ## 配套的一篇水文
 
 - [blog](https://blog.jiasm.org/2018/07/21/TypeScript%E5%9C%A8node%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5/)
