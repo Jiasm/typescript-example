@@ -1,4 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import chai from 'chai'
 import chaiHttp from 'chai-http'
 import { host, port } from '../conf'
