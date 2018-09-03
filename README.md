@@ -62,3 +62,9 @@ npm test
 - [blog](https://blog.jiasm.org/2018/08/26/TypeScript%E5%9C%A8react%E9%A1%B9%E7%9B%AE%E4%B8%AD%E7%9A%84%E5%AE%9E%E8%B7%B5/)
 - [掘金](https://juejin.im/post/5b83a02ff265da43737e9a27)
 - [思否](https://segmentfault.com/a/1190000016163937)
+
+### 最后一公里 - webpack 与 mocha/chai
+
+- [blog](https://blog.jiasm.org/2018/09/03/%E4%BD%BF%E7%94%A8-TypeScript-%E6%94%B9%E9%80%A0%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7%E5%8F%8A%E6%B5%8B%E8%AF%95%E7%94%A8%E4%BE%8B/)
+- [掘金](https://juejin.im/post/5b8ca576e51d4538e6334bcd)
+- [思否](https://segmentfault.com/a/1190000016247815)
