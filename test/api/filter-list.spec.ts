@@ -2,7 +2,7 @@ import chai from 'chai'
 import chaiHttp from 'chai-http'
 import { host, port } from '../conf'
 import { Gender } from '../../src/config'
-import UserInfo from '../../src/entity/user/user-info'
+import UserInfo from '../../src/entities/user/user-info'
 
 chai.use(chaiHttp)
 const should = chai.should()
