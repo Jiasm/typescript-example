@@ -1,7 +1,7 @@
 import { Ctx, Param, Get, JsonController } from 'routing-controllers'
 import { Context } from 'koa'
 import { UserInfoModel } from '../../models/user/user-info'
-import UserInfo from '../../entity/user/user-info'
+import UserInfo from '../../entities/user/user-info'
 
 @JsonController('/list')
 export default class {
