@@ -4,7 +4,7 @@ export type MysqlConfig = {
   user: string
   password: string
   database: string
-  entity: string
+  modelPath: string
 }
 
 export type ConfigItem = MysqlConfig | string | Array<string>

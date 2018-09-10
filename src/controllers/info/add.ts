@@ -1,7 +1,7 @@
 import { Ctx, Param, Get, JsonController } from 'routing-controllers'
 import { UserData } from 'user-info'
 import { Context } from 'koa'
-import { UserInfoModel } from '../../models/user/user-info'
+import UserInfo from '../../models/user/user-info'
 
 @JsonController('/add')
 export default class {
@@ -51,7 +51,7 @@ export default class {
  * 创建一个新的用户
  */
 async function createUser({ name, gender }: UserData) {
-  return (await UserInfoModel.create({
+  return (await UserInfo.create({
     name,
     gender,
   })).save()

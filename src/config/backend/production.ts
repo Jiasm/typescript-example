@@ -7,6 +7,6 @@ export const configs: ConfigMap = {
     password: 'jarvis',
     database: 'ts_test',
     key: 'mysql',
-    entity: 'user'
-  }
+    modelPath: 'user',
+  },
 }

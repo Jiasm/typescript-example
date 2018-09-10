@@ -1,7 +1,6 @@
 import { Ctx, Param, Get, JsonController } from 'routing-controllers'
 import { Context } from 'koa'
-import { UserInfoModel } from '../../models/user/user-info'
-import UserInfo from '../../entities/user/user-info'
+import UserInfo from '../../models/user/user-info'
 
 @JsonController('/list')
 export default class {
@@ -50,10 +49,8 @@ export default class {
 /**
  * 获取列表数据
  */
-async function filterList({ gender }: { gender?: number } = {}): Promise<
-  UserInfo[]
-  > {
-  return UserInfoModel.findAll({
+async function filterList({ gender }: { gender?: number } = {}) {
+  return UserInfo.findAll({
     raw: true,
     where: gender && {
       gender,
