@@ -38,7 +38,6 @@ export default merge(baseConfig, {
     }),
     new AddAssetHtmlPlugin({
       filepath: path.resolve(__dirname, '../../client-dist/vendors.dll.js'),
-      includeSourcemap: false,
     }),
     new webpack.WatchIgnorePlugin([
       /\.ejs$/,

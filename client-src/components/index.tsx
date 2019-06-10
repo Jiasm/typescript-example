@@ -1,10 +1,10 @@
 import React from 'react'
-import { Typography, CssBaseline } from '@material-ui/core'
+import { CssBaseline } from '@material-ui/core'
 import { withStyles, createStyles, Theme } from '@material-ui/core/styles'
 import Add from './add'
 import List from './list'
 
-const styles = (theme: Theme) => createStyles({
+const styles = () => createStyles({
   logo: {
     maxWidth: '140px',
     margin: '0 auto',
@@ -22,17 +22,19 @@ const styles = (theme: Theme) => createStyles({
   },
 })
 
-class Index extends React.Component<{
+class Index extends React.PureComponent<{
   classes: any
   theme: Theme
 }> {
   render() {
     const { classes } = this.props
-    return <section className={classes.wrap}>
-      <Add />
-      <CssBaseline />
-      <List />
-    </section>
+    return (
+      <section className={classes.wrap}>
+        <Add />
+        <CssBaseline />
+        <List />
+      </section>
+    )
   }
 }
 
